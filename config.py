@@ -1,4 +1,6 @@
-# This file intentionally contains a FAKE secret for a cybersecurity classroom demo.
-# Do NOT use real secrets, real passwords, real tokens, or real AWS keys.
+# Safe version: no hardcoded secret is stored in the source code.
+# The value should come from an environment variable or GitHub Secret.
 
-AWS_ACCESS_KEY_ID = "AKIAIOSFODNN7EXAMPLE"
+import os
+
+AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
